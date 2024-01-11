@@ -1,28 +1,17 @@
-window.onload = function () { 
-	let slides = 
-		document.getElementsByClassName('promo_carousel_item'); 
+window.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.menu'),
+    menuItem = document.querySelectorAll('.menu_item'),
+    hamburger = document.querySelector('.hamburger');
 
-	function addActive(slide) { 
-		slide.classList.add('active'); 
-	} 
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('menu_active');
+    });
 
-	function removeActive(slide) { 
-		slide.classList.remove('active'); 
-	} 
-
-	addActive(slides[0]); 
-	setInterval(function () { 
-		for (let i = 0; i < slides.length; i++) { 
-			if (i + 1 == slides.length) { 
-				addActive(slides[0]); 
-				setTimeout(removeActive, 250, slides[i]); 
-				break; 
-			} 
-			if (slides[i].classList.contains('active')) { 
-				setTimeout(removeActive, 250, slides[i]); 
-				addActive(slides[i + 1]); 
-				break; 
-			} 
-		} 
-	}, 3000); 
-};
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger_active');
+            menu.classList.toggle('menu_active');
+        })
+    })
+})
