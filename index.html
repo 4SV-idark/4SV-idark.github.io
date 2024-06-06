@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>metalloobrabotka-new</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon//favicon-16x16.png">
+    <link rel="manifest" href="icons/favicon//site.webmanifest">
+    <link rel="mask-icon" href="icons/favicon//safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- CSS Стили Начало -->
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/form-processing.css">
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/fons.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- CSS Стили Конец -->
+
+    <style>
+
+
+
+    </style>
+
+</head>
+<body>
+<!-- preloader Начало -->
+    <div class='preloader' id='preloader'>
+        <div class="preloader__loader">
+            <div class='demoPreloaderDoubleRing'>
+                <div class='demoPreloaderDoubleRing__inner'>
+                    <div></div>
+                    <div></div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- preloader Конец -->
+
+<div class="wrapper">
+    <!-- navbar Начало -->
+    <nav id="navbar" class="navbar">
+        <div class="conteiner">
+            <div class="navbar__conteiner">
+                <a href="#navbar" class="navbar__logo"><img src="icons/logo/logo-1.svg" width="62" height="67" alt="logo"></a>
+
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="#navbar" class="navbar__link">Главный</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#info" class="navbar__link">Почему мы</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#contcats" class="navbar__link">Контакты</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#gallery" class="navbar__link">Наши работы</a>
+                    </li>
+                </ul>
+
+                
+                <a id="mybtn" class="navbar__callback">Заказать звонок</a>
+                
+                
+
+                <div id="mymodal" class="navbar__modal">
+                    <div class="navbar__modal__content">
+                        <div>
+                            <a class="navbar__modal__close">&times;</a>
+                            <h2 class="navbar__modal__title">Заказать звонок</h2>
+                            <p class="navbar__modal__subtitle">Оставьте Ваши данные и мы перезвоним!</p>
+                        </div>
+                        <div class="form-container">
+                            <form id="form-1" action="/feedback/examples/form-processing-1.php" enctype="multipart/form-data" novalidate>
+
+                                <!-- Имя пользователя -->
+                                <div class="form-group">
+                                    <input
+                                        id="form-1-name"
+                                        type="text"
+                                        name="name"
+                                        class="form-control"
+                                        value=""
+                                        minlength="2"
+                                        maxlength="30"
+                                        placeholder="Введите свое имя"
+                                        required="required"
+                                        autocomplete="off"
+                                    >
+                                    <label for="form-1-name" class="control-label">Ваше имя</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <!-- Телефон пользователя -->
+                                <div class="form-group">
+                                    <input
+                                        id="form-1-phone"
+                                        type="text"
+                                        name="phone"
+                                        class="form-control"
+                                        placeholder="+7(___) ___-__-__"
+                                        required="required"
+                                        autocomplete="off"
+                                    >
+                                    <label for="form-1-phone" class="control-label">Ваш телефон</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <!-- Email пользователя -->
+                                <div class="form-group">
+                                    <input
+                                        id="form-1-email"
+                                        type="email"
+                                        name="email"
+                                        class="form-control"
+                                        value=""
+                                        placeholder="Введите свой E-mail"
+                                        required="required"
+                                        autocomplete="off"
+                                    >
+                                    <label for="form-1-email" class="control-label">Ваш E-mail</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                        
+                                <!-- Пользовательское солашение -->
+                                <div class="form-group form-agree form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        name="agree"
+                                        id="form-1-agree"
+                                        value="true"
+                                        required
+                                    >
+                                    <label class="form-check-label" for="form-1-agree">
+                                        <span>
+                                            Нажимая кнопку, я принимаю условия <a href="#">Пользовательского соглашения</a>
+                                            и даю своё согласие на обработку моих персональных данных
+                                        </span>
+                                    </label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <!-- Сообщение об ошибке -->
+                                <div class="form-error form-error_hide">Исправьте данные и отправьте форму ещё раз.</div>
+                                
+                                <!-- Кнопка для отправки формы на сервер -->
+                                    <div class="form-submit">
+                                    <button type="submit">Отправить сообщение</button>
+                                </div>
+                        
+                            </form>
+
+                            <!-- Сообщение об успешной отправки формы -->
+                            <div class="form-success form-success_hide">
+                                <div class="form-success__message">Ваше сообщение отправлено, спасибо! <span>В ближайшее время мы с вами свяжемся для уточнения деталей заказа.</span>
+                                <button type="button" class="form-success__btn">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="70" onclick="this.classList.toggle('active')">
+                        <path
+                                class="line top"
+                                d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                        <path
+                                class="line middle"
+                                d="m 70,50 h -40" />
+                        <path
+                                class="line bottom"
+                                d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+                        </svg>
+                </div>
+
+            </div>
+            <div class="navbar__text">
+                <div class="navbar__text__conteiner">
+                    <div class="navbar__text__content">
+                        <div class="navbar__text__content__title">Токарно-фрезерная</div>
+                        <div class="navbar__text__content__subtitle">обработка</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar Конец -->
+
+    <!-- main Начало -->
+    <main id="main" class="main">
+        <div class="main__body">                
+            <div class="main__img">
+                <div class="main__item">
+                    <div class="main__clouds"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main Конец -->
+
+    <!-- info Начало -->
+    <section id="info" class="info">
+        <div class="conteiner">
+            <div class="info__conteiner">
+                <h2 class="info__title">Почему мы</h2>
+                <ul class="info__list">
+                    <li class="info__link">
+                        Закрытый цикл работ
+                    </li>
+                    <li class="info__link">
+                        Изготовление в соответствии с требованием чертежа
+                    </li>
+                    <li class="info__link">
+                        Опыт работы более 10 лет в металлообработка
+                    </li>
+                    <li class="info__link">
+                        Любая форма оплаты
+                    </li>
+                    <li class="info__link">
+                        Отправка по РФ
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- info Конец -->
+
+    <!-- contcats Начало -->
+    <section id="contcats" class="contcats">
+        <div class="conteiner">
+            <div class="contcats__conteiner">
+                <h2 class="contcats__title">Контакты</h2>
+                <div class="contcats__content">
+                    <div class="contcats__up">
+                        <div class="contcats__phone contcats__details">
+                            <i class="fa-solid fa-phone-volume contcats__icons"><span class="contcats__padding"><a href="tel:+79130666866" class="contcats__text">+7 (913) 066 68 66</a></span></i>
+                            <i class="fa-solid fa-envelope-open-text contcats__icons"><span class="contcats__padding"><a href="mailto:darkk2469@gmail.com" class="contcats__text">darkk2469@gmail.com</a></span></i>
+                        </div>
+                    </div>
+
+                    <div class="contcats__down">
+                        <div class="contcats__form">
+                            <div class="contcats__form__body">
+                                <h2 class="contcats__form__title">Напишите нам</h2>
+                                <!-- Форма обратной связи -->
+                                <div class="form-container">
+                                    <form id="form-2" action="/feedback/examples/form-processing-2.php" enctype="multipart/form-data" novalidate>
+
+                                        <!-- Имя пользователя -->
+                                        <div class="form-group">
+                                            <input
+                                                id="form-2-name"
+                                                type="text"
+                                                name="name"
+                                                class="form-control"
+                                                value=""
+                                                minlength="2"
+                                                maxlength="30"
+                                                placeholder="Введите свое имя"
+                                                required="required"
+                                                autocomplete="off"
+                                            >
+                                            <label for="form-2-name" class="control-label">Ваше имя</label>
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+    
+                                        <!-- Телефон пользователя -->
+                                        <div class="form-group">
+                                            <input
+                                                id="form-2-phone"
+                                                type="text"
+                                                name="phone"
+                                                class="form-control"
+                                                placeholder="+7(___) ___-__-__"
+                                                required="required"
+                                                autocomplete="off"
+                                            >
+                                            <label for="form-2-phone" class="control-label">Ваш телефон</label>
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+    
+                                        <!-- Email пользователя -->
+                                        <div class="form-group">
+                                            <input
+                                                id="form-2-email"
+                                                type="email"
+                                                name="email"
+                                                class="form-control"
+                                                value=""
+                                                placeholder="Введите свой E-mail"
+                                                required="required"
+                                                autocomplete="off"
+                                            >
+                                            <label for="form-2-email" class="control-label">Ваш E-mail</label>
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+    
+                                        <!-- Сообщение пользователя -->
+                                        <div class="form-group">
+                                            <textarea
+                                                id="form-2-message"
+                                                name="message"
+                                                class="form-control"
+                                                rows="3"
+                                                placeholder="Введите сообщение (не менее 20 символов)"
+                                                minlength="20"
+                                                maxlength="500"
+                                                required="required"
+                                                autocomplete="off"
+                                            ></textarea>
+                                            <label for="form-2-message" class="control-label">Сообщение</label>
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                
+                                        <!-- Файлы, для прикрепления к форме -->
+                                        <div class="form-group form-attach" data-count="5">
+                                                <div class="form-attach__wrapper">
+                                                    <input
+                                                        type="file"
+                                                        name="attach[]"
+                                                        multiple
+                                                        required
+                                                    >
+                                                    <div class="form-attach__description">
+                                                        <div class="text">Нажмите для загрузки файлов или перетащите (не более <span class="form-attach__count">5</span>)</div>
+                                                        <div class="text-sm">PDF до 5120 Кбайт (5 МБ)</div>
+                                                    </div>
+                                                    <div class="form-attach__items"></div>
+                                                    <label for="file" class="form-attach__control-label">Чертеж</label>
+                                                </div>
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                
+                                        <!-- Пользовательское солашение -->
+                                        <div class="form-group form-agree form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                name="agree"
+                                                id="form-2-agree"
+                                                value="true"
+                                                required
+                                            >
+                                            <label class="form-check-label" for="form-2-agree">
+                                                <span>
+                                                    Нажимая кнопку, я принимаю условия <a href="#">Пользовательского соглашения</a>
+                                                    и даю своё согласие на обработку моих персональных данных
+                                                </span>
+                                            </label>
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+    
+                                        <!-- Сообщение об ошибке -->
+                                        <div class="form-error form-error_hide">Исправьте данные и отправьте форму ещё раз.</div>
+                                        
+                                        <!-- Кнопка для отправки формы на сервер -->
+                                        <div class="form-submit">
+                                            <button type="submit">Отправить сообщение</button>
+                                        </div>
+                                
+                                    </form>
+    
+                                    <!-- Сообщение об успешной отправки формы -->
+                                    <div class="form-success form-success_hide">
+                                        <div class="form-success__message">Ваше сообщение отправлено, спасибо! <span>В ближайшее время мы с вами свяжемся для уточнения деталей заказа.</span>
+                                        <button type="button" class="form-success__btn">Закрыть</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contcats Конец -->
+    
+    <!-- gallery Начало -->
+    <section id="gallery" class="gallery">
+        <div class="conteiner">
+            <div class="gallery__conteiner">
+                <h2 class="gallery__title">Наши работы</h2>
+                <div class="slider autoplay" uk-lightbox="animation: slide">
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-1.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-1.jpg"
+                                class="gallery__img gallery__img-1"
+                                alt="gallery-img-1"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+    
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-2.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-2.jpg"
+                                class="gallery__img gallery__img-2"
+                                alt="gallery-img-2"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-3.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-3.jpg"
+                                class="gallery__img gallery__img-3"
+                                alt="gallery-img-3"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-4.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-4.jpg"
+                                class="gallery__img gallery__img-4"
+                                alt="gallery-img-4"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-5.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-5.jpg"
+                                class="gallery__img gallery__img-5"
+                                alt="gallery-img-5"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-6.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-6.jpg"
+                                class="gallery__img gallery__img-6"
+                                alt="gallery-img-6"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-7.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-7.jpg"
+                                class="gallery__img gallery__img-7"
+                                alt="gallery-img-7"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-8.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-8.jpg"
+                                class="gallery__img gallery__img-8"
+                                alt="gallery-img-8"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-9.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-9.jpg"
+                                class="gallery__img gallery__img-9"
+                                alt="gallery-img-9"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="gallery__group">
+                        <a class="uk-inline" href="img/gallery/big-img/gallery-big-10.jpg">
+                            <img
+                                src="img/gallery/small-img/gallery-small-10.jpg"
+                                class="gallery__img gallery__img-10"
+                                alt="gallery-img-10"
+                                loading="lazy"
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- gallery Конец -->
+
+    <!-- Footer Начало -->
+    <footer class="footer">
+        <div class="conteiner">
+            <div class="footer__up">
+                <div class="footer__conteiner">
+                    <div class="footer__content">
+                        <a href="#navbar" class="footer__content__logo">
+                            <img src="icons/logo/logo-1.svg" width="62" height="67" alt="logo">
+                        </a>
+                        <a href="#navbar" class="footer__content__title">
+                            Токарно-фрезерная <br> обработка
+                        </a>
+                    </div>
+                    <div class="footer__callback">
+                        <a id="mybtn-1" class="footer__callback__btn">Заказать звонок</a>
+                    </div>
+                </div>
+
+                <div class="footer__list">
+                    <ul class="footer__list__menu">
+                        <li class="footer__list__item">
+                            <a href="#navbar" class="footer__list__link">Главный</a>
+                        </li>
+                        <li class="footer__list__item">
+                            <a href="#info" class="footer__list__link">Почему мы</a>
+                        </li>
+                        <li class="footer__list__item">
+                            <a href="#contcats" class="footer__list__link">Контакты</a>
+                        </li>
+                        <li class="footer__list__item">
+                            <a href="#gallery" class="footer__list__link">Наши работы</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__support">
+                    <div class="footer__support__title">Поддержка:</div>
+                    <a href="mailto:darkk2469@gmail.com" class="footer__support__text">support@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer__line"></div>
+
+            <div class="footer__down">
+                <a href="#" class="footer__down__subtitle">© 2024 — Все права защищены</a>
+                <a href="#" class="footer__down__subtitle">Пользовательское соглашение</a>
+                <a href="#" class="footer__down__subtitle">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Конец --> 
+</div>
+    
+    <!-- jquery Начало -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- jquery Конец-->
+
+    <!-- Скрипт для иконочного шрифта Начало -->
+    <script src="https://kit.fontawesome.com/6df9de6781.js" crossorigin="anonymous"></script>
+    <!-- Скрипт для иконочного шрифта Конец -->
+
+    <!-- JavaScript Начало -->
+    <!-- Скрипт для preloadera Начало -->
+    <script>
+        setTimeout(function() {
+            document.body.style.overflow = 'auto'; // Уберает scrolled
+        }, 1000); // Анимация будет длиться 1 секунду
+
+        window.onload = function() {
+            let preloader = document.getElementById('preloader');
+            preloader.classList.add('hide-preloader');
+            setInterval(function() {
+                preloader.classList.add('preloader-hidden');
+            }, 1000); // Анимация будет длиться 1 секунду
+        }
+    </script>
+    <!-- Скрипт для preloadera Конец -->
+
+    <!-- JavaScript для формы Начало -->
+    <!-- JavaScript для формы Конец -->
+    
+    <!-- JavaScript Основа Начало -->
+    <script src="/feedback/js/form-processing.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/uikit.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- JavaScript Основа Конец -->
+
+    <!-- JavaScript Конец -->
+</body>
+</html>
