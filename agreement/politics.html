@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>metalloobrabotka-new</title>
+
+    <!-- favicon Стили Начало -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon//favicon-16x16.png">
+    <link rel="manifest" href="/icons/favicon//site.webmanifest">
+    <link rel="mask-icon" href="/icons/favicon//safari-pinned-tab.svg" color="#0b1d26">
+    <meta name="msapplication-TileColor" content="#0b1d26">
+    <meta name="theme-color" content="#ffffff">
+    <!-- favicon Стили Конец -->
+
+    <!-- CSS Стили Начало -->
+    <link rel="stylesheet" href="/css/preloader.css">
+    <link rel="stylesheet" href="/css/form-processing.css">
+    <link rel="stylesheet" href="/css/fons.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- CSS Стили Конец -->
+
+</head>
+<body>
+<!-- preloader Начало -->
+    <div id="preloader" class="preloader">
+        <div class="preloader__loader">
+            <div class='demoPreloaderDoubleRing'>
+                <div class='demoPreloaderDoubleRing__inner'>
+                    <div></div>
+                    <div></div>
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- preloader Конец -->
+
+<div class="wrapper">
+    <!-- navbar Начало -->
+    <nav id="navbar" class="navbar">
+        <div class="conteiner">
+            <div class="navbar__conteiner">
+                <a href="/index.html#navbar" class="navbar__logo"><img src="/icons/logo/logo.svg" width="62" height="67" alt="logo"></a>
+
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/index.html#navbar" class="navbar__link">Главный</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/index.html#info" class="navbar__link">Почему мы</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/index.html#contcats" class="navbar__link">Контакты</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/index.html#gallery" class="navbar__link">Наши работы</a>
+                    </li>
+                </ul>
+
+                
+                <a id="mybtn" class="navbar__callback">Заказать звонок</a>
+                
+                
+
+                <div id="mymodal" class="navbar__modal">
+                    <div class="navbar__modal__content">
+                        <div>
+                            <a class="navbar__modal__close">&times;</a>
+                            <h2 class="navbar__modal__title">Заказать звонок</h2>
+                            <p class="navbar__modal__subtitle">Оставьте Ваши данные и мы перезвоним!</p>
+                        </div>
+                        <div class="form-container">
+                            <form id="form-1" action="/feedback/examples/form-processing-1.php" enctype="multipart/form-data" novalidate>
+
+                                <!-- Имя пользователя -->
+                                <div class="form-group">
+                                    <input
+                                        id="form-1-name"
+                                        type="text"
+                                        name="name"
+                                        class="form-control"
+                                        value=""
+                                        minlength="2"
+                                        maxlength="30"
+                                        placeholder="Введите свое имя"
+                                        required="required"
+                                        autocomplete="off"
+                                    >
+                                    <label for="form-1-name" class="control-label">Ваше имя</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <!-- Телефон пользователя -->
+                                <div class="form-group">
+                                    <input
+                                        id="form-1-phone"
+                                        type="text"
+                                        name="phone"
+                                        class="form-control"
+                                        placeholder="+7(___) ___-__-__"
+                                        required="required"
+                                        autocomplete="off"
+                                    >
+                                    <label for="form-1-phone" class="control-label">Ваш телефон</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <!-- Email пользователя -->
+                                <div class="form-group">
+                                    <input
+                                        id="form-1-email"
+                                        type="email"
+                                        name="email"
+                                        class="form-control"
+                                        value=""
+                                        placeholder="Введите свой E-mail"
+                                        required="required"
+                                        autocomplete="off"
+                                    >
+                                    <label for="form-1-email" class="control-label">Ваш E-mail</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                        
+                                <!-- Пользовательское солашение -->
+                                <div class="form-group form-agree form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        name="agree"
+                                        id="form-1-agree"
+                                        value="true"
+                                        required
+                                    >
+                                    <label class="form-check-label" for="form-1-agree">
+                                        <span>
+                                            Нажимая кнопку, я принимаю условия <a href="agreement.html">Пользовательского соглашения</a>
+                                            и даю своё согласие на обработку моих персональных данных
+                                        </span>
+                                    </label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <!-- Сообщение об ошибке -->
+                                <div class="form-error form-error_hide">Исправьте данные и отправьте форму ещё раз.</div>
+                                
+                                <!-- Кнопка для отправки формы на сервер -->
+                                    <div class="form-submit">
+                                    <button type="submit">Отправить сообщение</button>
+                                </div>
+                        
+                            </form>
+
+                            <!-- Сообщение об успешной отправки формы -->
+                            <div class="form-success form-success_hide">
+                                <div class="form-success__message">Ваше сообщение отправлено, спасибо! <span>В ближайшее время мы с вами свяжемся для уточнения деталей заказа.</span>
+                                <button type="button" class="form-success__btn">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="70" onclick="this.classList.toggle('active')">
+                        <path
+                                class="line top"
+                                d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                        <path
+                                class="line middle"
+                                d="m 70,50 h -40" />
+                        <path
+                                class="line bottom"
+                                d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+                        </svg>
+                </div>
+
+            </div>
+            <div class="navbar__text">
+                <div class="navbar__text__conteiner">
+                    <div class="navbar__text__content">
+                        <div class="navbar__text__content__title">Политика</div>
+                        <div class="navbar__text__content__subtitle">конфиденциальности</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar Конец -->
+
+    <!-- main Начало -->
+    <main id="main" class="main">
+        <div class="main__body">                
+            <div class="main__img">
+                <div class="main__item">
+                    <div class="main__clouds"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main Конец -->
+
+    <!-- politics Начало -->
+    <section class="politics">
+        <div class="conteiner">
+            <div class="politics__conteiner">
+                <div class="politics__title">Политика в отношении обработки персональных данных</div>
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">1.</i>Общие положения</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">1.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">1.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">1.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">1.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">1.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">2.</i>Основные понятия, используемые в Политике</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">2.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">2.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">2.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">2.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">2.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">3.</i>Основные права и обязанности Оператора</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">3.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">3.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">3.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">3.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">3.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">4.</i>Основные права и обязанности субъектов персональных данных</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">4.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">4.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">4.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">4.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">4.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">5.</i>Оператор может обрабатывать следующие персональные данные Пользователя</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">5.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">5.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">5.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">5.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">5.5.</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">6.</i>Принципы обработки персональных данных</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">6.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">6.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">6.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">6.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">6.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">7.</i>Цели обработки персональных данных</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">7.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">7.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">7.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">7.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">7.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">8.</i>Правовые основания обработки персональных данных</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">8.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">8.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">8.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">8.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">8.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">9.</i>Условия обработки персональных данных</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">9.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">9.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">9.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">9.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">9.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">10.</i>Порядок сбора, хранения, передачи и других видов обработки персональных данных</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">10.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">10.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">10.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">10.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">10.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">11.</i>Перечень действий, производимых Оператором с полученными персональными данными</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">11.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">11.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">11.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">11.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">11.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">12.</i>Трансграничная передача персональных данных</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">12.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">12.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">12.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">12.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">12.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">13.</i>Конфиденциальность персональных данных</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">13.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">13.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">13.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">13.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">13.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="politics__block">
+                    <div class="politics__subtitle"><i class="politics__subtitle__color">14.</i>Заключительные положения</div>
+                    <ul class="politics__list">
+                        <li class="politics__link">
+                            <i class="politics__link__color">14.1</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">14.2</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">14.3</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">14.5</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                        <li class="politics__link">
+                            <i class="politics__link__color">14.4</i> Lorem ipsum dolor sit amet consectetur
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- info Конец -->
+
+    <!-- Footer Начало -->
+    <footer class="footer">
+        <div class="conteiner">
+            <div class="footer__up">
+                <div class="footer__conteiner">
+                    <div class="footer__content">
+                        <a href="/index.html" class="footer__content__logo">
+                            <img src="/icons/logo/logo.svg" width="62" height="67" alt="logo">
+                        </a>
+                        <a href="/index.html" class="footer__content__title">
+                            Токарно-фрезерная <br> обработка
+                        </a>
+                    </div>
+                    <div class="footer__callback">
+                        <a id="mybtn-1" class="footer__callback__btn">Заказать звонок</a>
+                    </div>
+                </div>
+
+                <div class="footer__list">
+                    <ul class="footer__list__menu">
+                        <li class="footer__list__item">
+                            <a href="/index.html" class="footer__list__link">Главный</a>
+                        </li>
+                        <li class="footer__list__item">
+                            <a href="/index.html#info" class="footer__list__link">Почему мы</a>
+                        </li>
+                        <li class="footer__list__item">
+                            <a href="/index.html#contcats" class="footer__list__link">Контакты</a>
+                        </li>
+                        <li class="footer__list__item">
+                            <a href="/index.html#gallery" class="footer__list__link">Наши работы</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__support">
+                    <div class="footer__support__title">Поддержка:</div>
+                    <a href="mailto:darkk2469@gmail.com" class="footer__support__text">support@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer__line"></div>
+
+            <div class="footer__down">
+                <a href="#" class="footer__down__subtitle">© 2024 metalloobrabotka.net</a>
+                <a href="politics.html" class="footer__down__subtitle">Политика конфиденциальности</a>
+                <a href="agreement.html" class="footer__down__subtitle">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Конец --> 
+</div>
+    <!-- jquery Начало -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- jquery Конец-->
+
+    <!-- JavaScript Начало -->
+    <!-- Скрипт для preloadera Начало -->
+    <script>
+        setTimeout(function() {
+            document.body.style.overflow = 'auto'; // Уберает scrolled
+        }, 1000); // Анимация будет длиться 1 секунду
+
+        window.onload = function() {
+            let preloader = document.getElementById('preloader');
+            preloader.classList.add('hide-preloader');
+            setInterval(function() {
+                preloader.classList.add('preloader-hidden');
+            }, 1000); // Анимация будет длиться 1 секунду
+        }
+    </script>
+    <!-- Скрипт для preloadera Конец -->
+    
+    <!-- JavaScript Основа Начало -->
+    <script src="/feedback/js/form-processing.js"></script>
+    <script src="/js/inputmask.min.js"></script>
+    <script src="/js/agreement.js"></script>
+    <!-- JavaScript Основа Конец -->
+
+    <!-- JavaScript Конец -->
+</body>
+</html>
